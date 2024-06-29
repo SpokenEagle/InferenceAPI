@@ -1,5 +1,6 @@
 import asyncio
 from datetime import datetime
+import socket
 
 from django.contrib.auth import alogin, alogout, aauthenticate
 from django.contrib.auth.decorators import login_required
@@ -15,6 +16,9 @@ from .inference.summary import Summarizer
 from .models import Chat_Session, Chat_Messages
 from hashlib import sha256
 from asgiref.sync import sync_to_async, async_to_sync
+
+hostname = socket.gethostname()
+print("Running '{}' server at: {}".format(hostname, socket.gethostbyname(hostname)))
 
 summarizer = Summarizer()
 

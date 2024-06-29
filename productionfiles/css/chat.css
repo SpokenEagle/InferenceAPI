@@ -299,7 +299,7 @@ body {
     border-radius: 10px;
     padding: 2px;
     height: 90%;
-    overflow: hidden;
+    overflow: auto;
 }
 .history{
     color: #fff;

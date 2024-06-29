@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import socket
+hostname = socket.gethostname()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +27,7 @@ SECRET_KEY = 'django-insecure-lq1_1-8v_izpt@5m1-$b-7vte6ay&h0p_+whyy(a$k9!)3^3yn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '172.21.1.11', 'horizon.saikiranappidi.tech', '*']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'horizon.saikiranappidi.tech', socket.gethostbyname(hostname)]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://horizon.saikiranappidi.tech'
